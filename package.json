@@ -1,0 +1,21 @@
+{
+  "name": "weather-journal-app",
+  "version": "1.0.0",
+  "description": "This is a project made for **Udacity FrontEnd Nanodegree course**. You just need to enter your zip code (US only) and your feelings today.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giangster/weather-journal-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giangster/weather-journal-app/issues"
+  },
+  "homepage": "https://github.com/giangster/weather-journal-app#readme"
+}

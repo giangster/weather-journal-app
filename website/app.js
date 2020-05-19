@@ -1,6 +1,6 @@
 /* Global Variables */
-const weatherAPI = "https://api.openweathermap.org/data/2.5/weather";
-const apiKey = "b71e8130bc8070d330730c4de1445414";
+const weatherAPI = "https://api.openweathermap.org/data/2.5/weather?zip=";
+const apiKey = "&appid=b71e8130bc8070d330730c4de1445414&units=imperial";
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -11,7 +11,7 @@ document.getElementById("generate").addEventListener("click", performAction);
 function performAction(e) {
   const zip = document.getElementById("zip").value;
   const feelings = document.getElementById("feelings").value;
-  getWeather(zip)
+  getWeather(zip, apiKey)
     .then(function (data) {
       // Add data
       postData("/add", {
@@ -26,7 +26,8 @@ function performAction(e) {
 }
 
 const getWeather = async (zip, apiKey) => {
-  const res = await fetch(`${weatherAPI}?zip=${zip}&appid=${apiKey}`);
+  const res = await fetch(`${weatherAPI}${zip}${apiKey}`);
+  console.log(`${weatherAPI}${zip}${apiKey}`);
   try {
     const data = await res.json();
 
